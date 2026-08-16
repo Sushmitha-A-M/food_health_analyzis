@@ -1,0 +1,493 @@
+Create a modern, responsive AI-powered website called **“Food Health Advisor”**.
+
+### Core Idea
+
+The website allows a user to **scan a food dish using their camera or upload a food image**. The AI identifies the dish, estimates its nutritional characteristics, checks them against the user's health profile, and tells the user:
+
+1. Whether the food is generally suitable for them.
+2. Why it may or may not be suitable.
+3. Which nutritional factors are concerning.
+4. **A healthier alternative specifically chosen for that person's health condition.**
+5. Why the alternative is a better choice.
+
+The website should behave like a **personalized nutrition guidance tool**, while clearly stating that it does not replace professional medical advice.
+
+---
+
+## 1. User Health Profile
+
+Before scanning food, allow the user to create a health profile.
+
+Ask for:
+
+* Age
+* Gender (optional)
+* Height (optional)
+* Weight (optional)
+* Health conditions
+* Allergies
+* Dietary restrictions
+* Vegetarian/non-vegetarian preference
+* Foods they want to avoid
+* Foods they prefer
+
+Allow multiple health conditions to be selected.
+
+Examples:
+
+* Diabetes
+* High blood pressure
+* High cholesterol
+* Heart disease
+* Weight management
+* Kidney-related dietary restrictions
+* Food allergies
+* Other dietary restrictions
+
+---
+
+## 2. Scan Food
+
+Create a large **“Scan Food”** button.
+
+When clicked, allow the user to:
+
+* Open the device camera.
+* Take a picture of the food.
+* Upload an existing image.
+
+Show the captured image and provide:
+
+**“Analyze My Food”**
+
+button.
+
+---
+
+## 3. AI Food Recognition
+
+Use AI/computer vision to identify the food.
+
+For example:
+
+**Detected Food: Chicken Biryani**
+
+Show an AI confidence score, such as:
+
+**Food Recognition Confidence: 91%**
+
+If the AI is uncertain, ask the user to confirm the detected food instead of presenting uncertain information as fact.
+
+---
+
+## 4. Nutrition Analysis
+
+Estimate or retrieve nutritional information for the detected food.
+
+Display:
+
+* Calories
+* Carbohydrates
+* Sugar
+* Protein
+* Total fat
+* Saturated fat
+* Sodium
+* Fiber
+* Estimated portion size
+
+Use attractive nutrition cards and charts.
+
+Clearly label image-based nutritional values as **estimates**, because ingredients and portion sizes can vary.
+
+---
+
+## 5. Personalized Health Analysis
+
+Compare the detected food with the user's health profile.
+
+Display an overall result:
+
+### 🟢 Generally Suitable
+
+The food appears reasonably compatible with the user's profile.
+
+### 🟡 Eat With Caution
+
+The food may be acceptable in a limited portion or with modifications.
+
+### 🔴 Consider an Alternative
+
+The food may be unsuitable for the user's specific dietary needs.
+
+Do not simply classify foods as universally “good” or “bad.” Explain the reason based on the user's profile.
+
+---
+
+# 6. CONDITION-BY-CONDITION ANALYSIS
+
+If the user has multiple health conditions, analyze the food separately for each condition.
+
+Example:
+
+**Detected Food: Chicken Biryani**
+
+| Health Condition  | Result     | Explanation                                                   |
+| ----------------- | ---------- | ------------------------------------------------------------- |
+| Diabetes          | 🟡 Caution | Rice portion may provide a high carbohydrate load             |
+| High BP           | 🟡 Caution | Sodium content can vary considerably depending on preparation |
+| Weight Management | 🟡 Caution | Large portions can be calorie-dense                           |
+
+---
+
+# 7. ⭐ PERSONALIZED ALTERNATIVE FOOD FEATURE
+
+This is one of the most important features of the website.
+
+After analyzing the food, the AI must recommend **healthier alternative foods specifically suited to the user's health profile**.
+
+Do not just say:
+
+> “Avoid chicken biryani.”
+
+Instead, show:
+
+### Better Alternative For You
+
+**🥚 Boiled Egg + Vegetable Salad**
+
+**Why this may be a better option:**
+
+* Higher protein
+* Lower carbohydrate load than a rice-heavy meal
+* Can be prepared with little added salt
+* Provides vegetables and fiber
+
+Also show:
+
+**Alternative 2:** Grilled chicken + vegetables
+**Alternative 3:** Brown rice/chicken vegetable bowl
+
+The alternatives must depend on the person's health condition, dietary restrictions, allergies, and food preferences.
+
+---
+
+# 8. SMART ALTERNATIVE LOGIC
+
+The AI should consider:
+
+* User's health conditions
+* Allergies
+* Dietary restrictions
+* Vegetarian/non-vegetarian preference
+* Nutritional characteristics of the scanned food
+* User's preferred foods
+* Portion size
+* Cooking method
+
+For example:
+
+### User Profile:
+
+**Diabetes**
+
+### Scanned Food:
+
+**Chicken Biryani**
+
+### Result:
+
+🟡 **Eat With Caution**
+
+### Main Concern:
+
+High carbohydrate content from the rice.
+
+### Personalized Alternatives:
+
+🥚 **Boiled eggs + vegetables**
+🥗 **Chicken salad with vegetables**
+🍗 **Grilled chicken + non-starchy vegetables**
+
+---
+
+### Another Example
+
+### User Profile:
+
+**High Blood Pressure**
+
+### Scanned Food:
+
+**Very salty fried chicken**
+
+### Result:
+
+🔴 **Consider an Alternative**
+
+### Main Concern:
+
+Potentially high sodium content.
+
+### Personalized Alternatives:
+
+🍗 **Grilled chicken with herbs and spices**
+🥗 **Homemade low-sodium chicken salad**
+🍲 **Vegetable and chicken soup prepared with limited salt**
+
+---
+
+### Another Example
+
+### User Profile:
+
+**Weight Management**
+
+### Scanned Food:
+
+**French Fries**
+
+### Result:
+
+🟡 **Eat With Caution**
+
+### Personalized Alternatives:
+
+🥔 **Air-fried potatoes**
+🥦 **Roasted vegetables**
+🥗 **Vegetable salad**
+
+---
+
+# 9. Alternative Comparison
+
+Create a section called:
+
+## “A Better Choice For You”
+
+Show the original food and alternatives side by side.
+
+Example:
+
+**Your Food**
+🍛 Chicken Biryani
+
+**Better Options**
+🥚 Boiled Egg + Vegetables
+🍗 Grilled Chicken + Vegetables
+🥗 Chicken Salad
+
+For each alternative show:
+
+* Calories
+* Carbohydrates
+* Protein
+* Fat
+* Sodium
+* Why it may be better for the user's profile
+
+---
+
+# 10. Portion Recommendation
+
+The system should also provide practical portion guidance where appropriate.
+
+Example:
+
+**Instead of:**
+🍛 Large plate of chicken biryani
+
+**Consider:**
+
+* Smaller rice portion
+* More vegetables
+* Adequate protein
+* Limit high-sodium sides
+
+Do not provide rigid medical prescriptions. Use general nutrition guidance and encourage professional advice where appropriate.
+
+---
+
+# 11. Ingredient Warning
+
+If possible, identify likely ingredients from the dish.
+
+For example:
+
+**Chicken Biryani may contain:**
+
+* Rice
+* Chicken
+* Oil/ghee
+* Salt
+* Spices
+* Fried onions
+* Yogurt
+
+If an ingredient cannot be confirmed from the image, clearly mark it as:
+
+**“Possible ingredient — please verify.”**
+
+For users with allergies, prominently display:
+
+### ⚠️ Allergy Warning
+
+“Image analysis cannot reliably confirm every ingredient. Always verify ingredients before eating if you have a serious food allergy.”
+
+---
+
+# 12. Explain WHY
+
+The AI should never only display:
+
+❌ “Don't eat this.”
+
+Instead explain:
+
+**Why?**
+
+**What is the concern?**
+
+**What could you choose instead?**
+
+**Why is the alternative potentially better for your profile?**
+
+This makes the website educational and useful.
+
+---
+
+# 13. User-Friendly Result Screen
+
+After scanning, display the result in this order:
+
+### 🍽️ Food Detected
+
+**Chicken Biryani**
+
+### 📊 Nutrition Estimate
+
+Calories | Carbs | Protein | Fat | Sodium
+
+### ❤️ Your Health Analysis
+
+**Based on your health profile**
+
+### 🟡 Recommendation
+
+**Eat With Caution**
+
+### ⚠️ Main Concern
+
+**High carbohydrate load depending on portion size and preparation.**
+
+### 🥗 Better Choice For You
+
+**Boiled Egg + Vegetable Salad**
+
+### 💡 Why This Alternative?
+
+Short personalized explanation.
+
+### 🔄 Other Alternatives
+
+* Grilled chicken + vegetables
+* Chicken salad
+* Vegetable-based meal with an appropriate protein source
+
+### ⚠️ Important
+
+Nutrition estimates from images can be inaccurate. Verify ingredients and consult a qualified healthcare professional for condition-specific dietary advice.
+
+---
+
+# 14. UI Design
+
+Use a modern healthcare + AI design.
+
+### Home Page
+
+**FOOD HEALTH ADVISOR**
+
+> **“Scan your food. Know your nutrition. Choose what suits you.”**
+
+Buttons:
+
+**[ Create Health Profile ]**
+
+**[ 📷 Scan Food ]**
+
+---
+
+### Dashboard
+
+Display:
+
+* User health profile
+* Today's food scans
+* Previous recommendations
+* Favorite alternatives
+* Quick Scan button
+
+---
+
+### Food Scan Page
+
+Large camera interface with:
+
+**📷 Scan Your Food**
+
+Then:
+
+**[ Analyze Food ]**
+
+---
+
+### Result Page
+
+Use visually distinct sections:
+
+* Food identification
+* Nutrition
+* Health analysis
+* Recommendation
+* Main concerns
+* **Personalized alternative**
+* Other alternatives
+* Safety disclaimer
+
+---
+
+# 15. Important Medical Safety
+
+The application must NOT claim to diagnose diseases or prescribe treatment.
+
+Include this disclaimer:
+
+> **“Food Health Advisor provides AI-generated general nutrition information and is not a medical diagnostic or treatment tool. Nutritional information obtained from an image is an estimate and may vary based on ingredients, preparation method, and portion size. If you have a medical condition, food allergy, or medically prescribed diet, consult a qualified healthcare professional before making dietary changes.”**
+
+For severe allergies or medically restricted diets, the application should prioritize **ingredient verification and professional guidance** rather than making a definitive recommendation.
+
+---
+
+# 16. Technical Requirements
+
+Build the website with:
+
+* Responsive desktop and mobile UI
+* Camera access
+* Image upload
+* AI food recognition
+* Nutrition database/API
+* Personalized recommendation engine
+* Alternative food recommendation engine
+* Health profile storage
+* User authentication if required
+* Secure handling of user information
+* Loading animations
+* Error handling
+* Food recognition confidence score
+* Clear disclaimer and uncertainty indicators
+
+The final website should feel like a **real AI-powered personalized food advisor** where the user can simply take a picture of their meal and receive:
+
+**Food → Nutrition → Health Compatibility → Explanation → Personalized Healthier Alternative.**

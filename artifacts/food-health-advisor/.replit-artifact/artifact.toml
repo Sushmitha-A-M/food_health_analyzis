@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Food Health Advisor"
+description = "A responsive AI-powered nutrition guidance website that lets people create a health profile, scan or upload a meal, review estimated nutrition, understand condition-specific considerations, and discover personalized alternatives with clear medical-safety disclaimers."
+version = "1.0.0"
+id = "artifacts/food-health-advisor"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21353
+
+[services.development]
+run = "pnpm --filter @workspace/food-health-advisor run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/food-health-advisor", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/food-health-advisor/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21353"
+BASE_PATH = "/"
